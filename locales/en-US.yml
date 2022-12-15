@@ -1458,8 +1458,13 @@ admin/views/instance.vue:
   disable-local-timeline: "Disable the Local Timeline"
   disable-global-timeline: "Disable global timeline"
   showReplayInPublicTimeline: "Show replay in public timelines"
+<<<<<<< HEAD
   disableTimelinePreview: "Disable Timeline when unauthenticated"
   disableProfileDirectory: "Disable Explore when unauthenticated"
+=======
+  disableTimelinePreview: "Disable Timeline Preview"
+  disableUserPreview: "Disable User Preview"
+>>>>>>> 3b6a7580f... Feat: disable User Preview
   invite: "Invite"
   save: "Save"
   saved: "Saved"

@@ -1613,8 +1613,13 @@ admin/views/instance.vue:
   disable-local-timeline: "ローカルタイムラインを無効にする"
   disable-global-timeline: "グローバルタイムラインを無効にする"
   showReplayInPublicTimeline: "公開タイムラインにリプライを表示する"
+<<<<<<< HEAD
   disableTimelinePreview: "未認証時のタイムラインを無効にする"
   disableProfileDirectory: "未認証時のみつけるを無効にする"
+=======
+  disableTimelinePreview: "タイムラインプレビューを無効にする"
+  disableUserPreview: "ユーザープレビューを無効にする"
+>>>>>>> 3b6a7580f... Feat: disable User Preview
   invite: "招待"
   save: "保存"
   saved: "保存しました"

@@ -185,7 +185,11 @@ export type IMeta = {
 	disableGlobalTimeline?: boolean;
 	showReplayInPublicTimeline?: boolean;
 	disableTimelinePreview?: boolean;
+<<<<<<< HEAD
 	disableProfileDirectory?: boolean;
+=======
+	disableUserPreview?: boolean;
+>>>>>>> 3b6a7580f... Feat: disable User Preview
 	enableEmojiReaction?: boolean;
 	useStarForReactionFallback?: boolean;
 	hidedTags?: string[];

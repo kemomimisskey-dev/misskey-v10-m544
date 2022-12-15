@@ -72,6 +72,10 @@ export const meta = {
 				type: 'boolean',
 				description: 'Whether disabled unauthenticated Explore.',
 			},
+			disableUserPreview: {
+				type: 'boolean',
+				description: 'Whether disabled User Preview.',
+			},
 		}
 	}
 };
@@ -115,7 +119,11 @@ export default define(meta, async (ps, me) => {
 		disableGlobalTimeline: instance.disableGlobalTimeline,
 		showReplayInPublicTimeline: instance.showReplayInPublicTimeline,
 		disableTimelinePreview: instance.disableTimelinePreview,
+<<<<<<< HEAD
 		disableProfileDirectory: instance.disableProfileDirectory,
+=======
+		disableUserPreview: instance.disableUserPreview,
+>>>>>>> 3b6a7580f... Feat: disable User Preview
 		enableEmojiReaction: instance.enableEmojiReaction,
 		driveCapacityPerLocalUserMb: instance.localDriveCapacityMb,
 		driveCapacityPerRemoteUserMb: instance.remoteDriveCapacityMb,
