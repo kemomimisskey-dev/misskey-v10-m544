@@ -1464,6 +1464,7 @@ admin/views/instance.vue:
   disableTimelinePreview: "Disable Timeline Preview"
   disableProfileDirectory: "Disable Profile Directory"
   invite: "Invite"
+  invite-revoke: "Revoke all invitation codes"
   save: "Save"
   saved: "Saved"
   user-recommendation-config: "Recommended users"

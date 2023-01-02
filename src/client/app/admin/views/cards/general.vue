@@ -146,6 +146,19 @@ export default defineComponent({
 				});
 			});
 		},
+
+		inviteRevoke() {
+			this.$root.api('admin/invite-revoke').then((x: any) => {
+				this.$root.dialog({
+					type: 'success'
+				});
+			}).catch((e: Error) => {
+				this.$root.dialog({
+					type: 'error',
+					text: e
+				});
+			});
+		},
 	}
 });
 </script>
