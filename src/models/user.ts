@@ -97,8 +97,6 @@ type IUserBase = {
 
 	isCat: boolean;
 
-	isFox: boolean;
-
 	isOrganization?: boolean;
 	isGroup?: boolean;
 
@@ -466,7 +464,6 @@ export async function pack(
 		isVerified: !!(db as any).isVerified,
 		isBot: !!db.isBot,
 		isCat: !!db.isCat,
-		isFox: !!db.isFox,
 		borderColor: db.borderColor,
 
 		instance: fetchInstance(),

@@ -255,7 +255,7 @@ export async function createNote(value: string | IObject, resolver?: Resolver | 
 		cw,
 		text,
 		viaMobile: false,
-		localOnly: true,
+		localOnly: false,
 		geo: undefined,
 		visibility,
 		visibleUsers,

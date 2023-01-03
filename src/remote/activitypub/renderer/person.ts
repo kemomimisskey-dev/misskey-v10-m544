@@ -109,7 +109,6 @@ export default async (user: ILocalUser) => {
 		discoverable: !!user.isExplorable,
 		publicKey: renderKey(user, `#main-key`),
 		isCat: user.isCat,
-		isFox: user.isFox,
 		attachment: attachment.length ? attachment : undefined,
 	} as any;
 

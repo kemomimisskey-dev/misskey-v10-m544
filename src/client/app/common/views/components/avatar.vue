@@ -1,22 +1,22 @@
 <template>
-	<span class="mk-avatar" :style="style" :class="{ cat, fox }" :title="user | acct" v-if="disableLink && !disablePreview" v-user-preview="user.id" @click="onClick" v-once>
+	<span class="mk-avatar" :style="style" :class="{ cat }" :title="user | acct" v-if="disableLink && !disablePreview" v-user-preview="user.id" @click="onClick" v-once>
 		<span class="inner" :style="icon"></span>
 	</span>
-	<span class="mk-avatar" :style="style" :class="{ cat, fox  }" :title="user | acct" v-else-if="disableLink && disablePreview" @click="onClick" v-once>
+	<span class="mk-avatar" :style="style" :class="{ cat }" :title="user | acct" v-else-if="disableLink && disablePreview" @click="onClick" v-once>
 		<span class="inner" :style="icon"></span>
 	</span>
-	
-	<router-link class="mk-avatar" :style="style" :class="{ cat, fox  }" :to="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && !disablePreview && userUrl.startsWith('/')" v-user-preview="user.id" v-once>
+
+	<router-link class="mk-avatar" :style="style" :class="{ cat }" :to="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && !disablePreview && userUrl.startsWith('/')" v-user-preview="user.id" v-once>
 		<span class="inner" :style="icon"></span>
 	</router-link>
-	<a class="mk-avatar" :style="style" :class="{ cat, fox  }" :href="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && !disablePreview" v-user-preview="user.id" v-once>
+	<a class="mk-avatar" :style="style" :class="{ cat }" :href="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && !disablePreview" v-user-preview="user.id" v-once>
 		<span class="inner" :style="icon"></span>
 	</a>
 
-	<router-link class="mk-avatar" :style="style" :class="{ cat, fox  }" :to="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && disablePreview && userUrl.startsWith('/')" v-once>
+	<router-link class="mk-avatar" :style="style" :class="{ cat }" :to="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && disablePreview && userUrl.startsWith('/')" v-once>
 		<span class="inner" :style="icon"></span>
 	</router-link>
-	<a class="mk-avatar" :style="style" :class="{ cat, fox  }" :href="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && disablePreview" v-once>
+	<a class="mk-avatar" :style="style" :class="{ cat }" :href="userUrl" :title="user | acct" :target="target" v-else-if="!disableLink && disablePreview" v-once>
 		<span class="inner" :style="icon"></span>
 	</a>
 
@@ -53,9 +53,6 @@ export default Vue.extend({
 		cat(): boolean {
 			return this.user.isCat && this.$store.state.settings.circleIcons;
 		},
-		fox(): boolean {
-			return this.user.isFox && this.$store.state.settings.circleIcons;
-		},
 		style(): any {
 			return {
 				borderRadius: this.$store.state.settings.circleIcons ? '100%' : null
@@ -89,28 +86,10 @@ export default Vue.extend({
 .mk-avatar
 	display inline-block
 	vertical-align bottom
-		
-	&.fox::before,
-	&.fox::after
-		background #df548f
-		border solid 4px #f2e583
-		box-sizing border-box
-		content ''
-		display inline-block
-		height 50%
-		width 50%
 
-	&.fox::before
-		border-radius 0 75% 75%
-		transform rotate(37.5deg) skew(30deg)
-
-	&.fox::after
-		border-radius 75% 0 75% 75%
-		transform rotate(-37.5deg) skew(-30deg)
-
-	/*&:not(.cat, .fox)
+	&:not(.cat)
 		overflow hidden
-		border-radius 8px*/
+		border-radius 8px
 
 	&.cat::before,
 	&.cat::after

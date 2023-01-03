@@ -43,7 +43,7 @@ export default Vue.extend({
 		return {
 			text: this.script.interpolate(this.value.text),
 			visibility: 'public',
-			localOnly: true,
+			localOnly: false,
 			copyOnce: false,
 			useCw: !!this.page.sensitive,
 			cw: this.page.title,

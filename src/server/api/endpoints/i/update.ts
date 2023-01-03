@@ -174,13 +174,6 @@ export const meta = {
 			}
 		},
 
-		isFox: {
-			validator: $.optional.bool,
-			desc: {
-				'ja-JP': 'きつねか否か'
-			}
-		},
-
 		autoWatch: {
 			validator: $.optional.bool,
 			desc: {
@@ -293,7 +286,6 @@ export default define(meta, async (ps, user, app) => {
 	if (ps.hideFollows !== undefined) updates.hideFollows = ps.hideFollows;
 	if (typeof ps.noFederation == 'boolean') updates.noFederation = ps.noFederation;
 	if (typeof ps.isCat == 'boolean') updates.isCat = ps.isCat;
-	if (typeof ps.isFox == 'boolean') updates.isFox = ps.isFox;
 	if (typeof ps.autoWatch == 'boolean') updates['settings.autoWatch'] = ps.autoWatch;
 	if (typeof ps.alwaysMarkNsfw == 'boolean') updates['settings.alwaysMarkNsfw'] = ps.alwaysMarkNsfw;
 	if (ps.pushNotifications) updates['settings.pushNotifications'] = ps.pushNotifications;
