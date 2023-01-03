@@ -1014,8 +1014,9 @@ common/views/widgets/tips.vue:
   tips-line20: "The percentage of the calendar widget shows the percentage of time elapsed."
   tips-line21: "You can also use the API to develop bots."
   tips-line23: "Ai-chan kawaii!"
-  tips-line24: "Misskey has been running since 2014."
-  tips-line25: "In a browser compatible with notification features, you can receive notifications in case Misskey is not open"
+  tips-line24: "Kitsune(Fox) kawaii!"
+  tips-line25: "Misskey has been running since 2014."
+  tips-line26: "In a browser compatible with notification features, you can receive notifications in case Misskey is not open"
 common/views/widgets/sunmoon.vue:
   ctStart: " Civil twilight"
   sunrise: "Sunrise"

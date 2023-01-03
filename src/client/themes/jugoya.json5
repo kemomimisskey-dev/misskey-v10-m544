@@ -1,0 +1,18 @@
+{
+	name: '十五夜',
+	author: 'admin',
+	desc: '十五夜をイメージしました。',
+	base: 'dark',
+	vars: {
+		primary: 'rgb(136, 111, 60)',
+		secondary: 'rgb(18, 30, 62)',
+		text: 'rgb(245, 245, 169)',
+	},
+props: {
+		renoteGradient: '#b7aa00',
+		noteText: '#fff',
+		noteHeaderName: '#fff',
+		announcementsTitle: '#539eff',
+	},
+	id: 'jugoya',
+}

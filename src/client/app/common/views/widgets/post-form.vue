@@ -75,7 +75,7 @@ export default define({
 			text: '',
 			files: [],
 			visibility: 'public',
-			localOnly: false,
+			localOnly: true,
 			copyOnce: false,
 			secondaryNoteVisibility: 'none',
 			tertiaryNoteVisibility: 'none',

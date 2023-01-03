@@ -5,6 +5,7 @@
 	<a v-else class="name" :href="userUrl" v-user-preview="note.user.id"><mk-user-name :user="note.user"/></a>
 	<span class="is-bot" v-if="note.user.isBot" :title="$t('@.bot-user')"><fa icon="robot"/></span>
 	<span class="is-cat" v-if="note.user.isCat" :title="$t('@.cat-user')"><fa :icon="faPaw"/></span>
+	<span class="is-fox" v-if="note.user.isFox" :title="$t('@.fox-user')"><fa :icon="faPaw"/></span>
 	<span class="username"><mk-acct :user="note.user"/></span>
 	<span class="is-verified" v-if="note.user.isVerified" :title="$t('@.verified-user')"><fa icon="star"/></span>
 	<div class="info" v-if="!noInfo">
@@ -97,6 +98,10 @@ export default Vue.extend({
 
 	> .is-bot
 	> .is-cat
+		margin 0 .5em 0 0
+		color var(--noteHeaderBadgeFg)
+
+	> .is-fox
 		margin 0 .5em 0 0
 		color var(--noteHeaderBadgeFg)
 

@@ -19,6 +19,7 @@ import { toISODateOrNull, toOidString, toOidStringOrNull } from '../misc/pack-ut
 import { transform } from '../misc/cafy-id';
 import { extractMfmTypes } from '../mfm/extract-mfm-types';
 import { nyaize } from '../misc/nyaize';
+import { nojaize } from '../misc/nojaize';
 import { extractEmojis } from '../mfm/extract-emojis';
 
 const Note = db.get<INote>('notes');
@@ -449,6 +450,16 @@ export const pack = async (
 		if (packed.poll?.choices) {
 			for (const c of packed.poll.choices) {
 				if (c.text) c.text = nyaize(c.text);
+			}
+		}
+	}
+
+	if (packed.user?.isFox) {
+		if (packed.text) packed.text = nojaize(packed.text);
+		if (packed.cw) packed.cw = nojaize(packed.cw);
+		if (packed.poll?.choices) {
+			for (const c of packed.poll.choices) {
+				if (c.text) c.text = nojaize(c.text);
 			}
 		}
 	}
