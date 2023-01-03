@@ -28,6 +28,7 @@ export const rainyTheme: Theme = require('../themes/rainy.json5');
 export const mauveTheme: Theme = require('../themes/mauve.json5');
 export const grayTheme: Theme = require('../themes/gray.json5');
 export const tweetDeckTheme: Theme = require('../themes/tweet-deck.json5');
+export const jugoyaTheme: Theme = require('../themes/jugoya.json5');
 
 
 export const blackTweet: Theme = require('../themes/black-tweet.json5');
@@ -47,6 +48,7 @@ export const builtinThemes = [
 	hikaemeTheme,
 	halloweenLady,
 	cafeTheme,
+	jugoyaTheme,
 	japaneseSushiSetTheme,
 	gruvboxDarkTheme,
 	monokaiTheme,

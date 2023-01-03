@@ -64,7 +64,7 @@ export default (opts) => ({
 			geo: null,
 			visibility: 'public',
 			visibleUsers: [],
-			localOnly: false,
+			localOnly: true,
 			copyOnce: false,
 			secondaryNoteVisibility: 'none',
 			tertiaryNoteVisibility: 'none',

@@ -26,6 +26,7 @@
 					<span class="is-verified" v-if="user.isVerified" :title="$t('@.verified-user')"><fa icon="star"/></span>
 					<span class="is-bot" v-if="user.isBot" :title="$t('@.bot-user')"><fa icon="robot"/></span>
 					<span class="is-cat" v-if="user.isCat" :title="$t('@.cat-user')"><fa :icon="faPaw"/></span>
+					<span class="is-fox" v-if="user.isFox" :title="$t('@.fox-user')"><fa :icon="faPaw"/></span>
 					<span class="followed" v-if="user.isFollowed">{{ $t('follows-you') }}</span>
 				</div>
 				<div class="description">
@@ -302,6 +303,10 @@ export default Vue.extend({
 
 				> .is-bot
 				> .is-cat
+					margin-left .5em
+					color var(--noteHeaderBadgeFg)
+
+				> .is-fox
 					margin-left .5em
 					color var(--noteHeaderBadgeFg)
 

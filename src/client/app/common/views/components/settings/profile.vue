@@ -76,7 +76,8 @@
 
 		<section>
 			<div>
-				<ui-switch v-model="isCat" @change="save(false)">{{ $t('is-cat') }}</ui-switch>
+				<ui-switch v-model="isCat" :disabled="isFox" @change="save(false)">{{ $t('is-cat') }}</ui-switch>
+				<ui-switch v-model="isFox" :disabled="isCat" @change="save(false)">{{ $t('is-fox') }}</ui-switch>
 				<ui-switch v-model="isBot" @change="save(false)">{{ $t('is-bot') }}</ui-switch>
 				<ui-switch v-model="alwaysMarkNsfw">{{ $t('@._settings.always-mark-nsfw') }}</ui-switch>
 			</div>
@@ -175,6 +176,7 @@ export default Vue.extend({
 			bannerId: null,
 			isCat: false,
 			isBot: false,
+			isFox: false,
 			isLocked: false,
 			refuseFollow: false,
 			carefulBot: false,
@@ -229,6 +231,7 @@ export default Vue.extend({
 		this.borderColor = this.$store.state.i.borderColor;
 		this.isCat = this.$store.state.i.isCat;
 		this.isBot = this.$store.state.i.isBot;
+		this.isFox = this.$store.state.i.isFox;
 		this.isLocked = this.$store.state.i.isLocked;
 		this.refuseFollow = this.$store.state.i.refuseFollow;
 		this.carefulBot = this.$store.state.i.carefulBot;
@@ -330,6 +333,7 @@ export default Vue.extend({
 				bannerId: this.bannerId || undefined,
 				isCat: !!this.isCat,
 				isBot: !!this.isBot,
+				isFox: !!this.isFox,
 				isLocked: !!this.isLocked,
 				refuseFollow: !!this.refuseFollow,
 				carefulBot: !!this.carefulBot,

@@ -84,6 +84,10 @@ export const schemas = {
 				type: 'boolean',
 				description: 'Whether this account is a cat.'
 			},
+			isFox: {
+				type: 'boolean',
+				description: 'Whether this account is a fox.'
+			},
 			isAdmin: {
 				type: 'boolean',
 				description: 'Whether this account is the admin.'

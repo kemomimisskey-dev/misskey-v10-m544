@@ -61,6 +61,7 @@ export type ThinPackedUser = {
 	borderColor?: string | null;
 	isBot: boolean;
 	isCat: boolean;
+	isFox: boolean;
 	instance: any;	// TODO
 	avoidSearchIndex?: boolean;
 	tags: string[];

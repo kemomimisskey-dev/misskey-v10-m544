@@ -130,9 +130,9 @@ export default async (user: IUser, data: Option, silent = false) => {
 	const isPureRenote = data.text == null && data.poll == null && (data.files == null || data.files.length == 0);
 
 	if (data.createdAt == null) data.createdAt = new Date();
-	if (data.visibility == null) data.visibility = 'public';
+	if (data.visibility == null) data.visibility = 'home';
 	if (data.viaMobile == null) data.viaMobile = false;
-	if (data.localOnly == null) data.localOnly = false;
+	if (data.localOnly == null) data.localOnly = true;
 	if (data.copyOnce == null) data.copyOnce = false;
 
 	if (data.visibleUsers) {

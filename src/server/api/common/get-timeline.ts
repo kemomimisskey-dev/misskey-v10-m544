@@ -34,6 +34,7 @@ function getStages(query: any, sort: Record<string, number>, limit: number) {
 							emojis: true,
 							isCat: true,
 							isBot: true,
+							isFox: true,
 							isAdmin: true,
 							isVerified: true,
 							borderColor: true,

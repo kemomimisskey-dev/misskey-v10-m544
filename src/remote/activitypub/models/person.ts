@@ -186,7 +186,8 @@ export async function createPerson(uri: string, resolver?: Resolver): Promise<IR
 			isBot: getApType(object) === 'Service',
 			isGroup: getApType(object) === 'Group',
 			isOrganization: getApType(object) === 'Organization',
-			isCat: (person as any).isCat === true
+			isCat: (person as any).isCat === true,
+			isFox: (person as any).isFox === true,
 		}) as IRemoteUser;
 	} catch (e) {
 		// duplicate key error
@@ -382,6 +383,7 @@ export async function updatePerson(uri: string, resolver?: Resolver, hint?: IAct
 		isGroup: getApType(object) === 'Group',
 		isOrganization: getApType(object) === 'Organization',
 		isCat: (person as any).isCat === true,
+		isFox: (person as any).isFox === true,
 		isLocked: person.manuallyApprovesFollowers,
 		isExplorable: !!person.discoverable,
 		publicKey: person.publicKey ? {
