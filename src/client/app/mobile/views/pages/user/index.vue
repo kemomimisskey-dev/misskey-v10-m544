@@ -22,12 +22,8 @@
 					<h1><mk-user-name :user="user" :key="user.id" :nowrap="false"/></h1>
 					<span class="username"><mk-acct :user="user" :detail="true" :key="user.id"/></span>
 					<span class="moved" v-if="user.movedToUser != null">moved to <router-link :to="user.movedToUser | userPage()"><mk-acct :user="user.movedToUser" :detail="true"/></router-link></span>
-<<<<<<< HEAD
-					<span class="is-admin" v-if="user.isAdmin" :title="$t('@.admin-user')"><fa :icon="faCrown"/></span>
-=======
 					<span class="is-admin" v-if="user.isAdmin" :title="$t('@.admin-user')"><fa icon="wrench"/></span>
 					<span class="is-moderator" v-if="user.isModerator" :title="$t('@.moderator')"><fa :icon="faUserShield"/></span>
->>>>>>> 24872b955... Show Moderatar Icon
 					<span class="is-verified" v-if="user.isVerified" :title="$t('@.verified-user')"><fa icon="star"/></span>
 					<span class="is-bot" v-if="user.isBot" :title="$t('@.bot-user')"><fa icon="robot"/></span>
 					<span class="is-cat" v-if="user.isCat" :title="$t('@.cat-user')"><fa :icon="faPaw"/></span>

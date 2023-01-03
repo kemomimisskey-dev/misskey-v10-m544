@@ -1,5 +1,14 @@
 <template>
 <div>
+	<x-general/>
+	<x-notetl/>
+	<x-drive/>
+	<x-captcha/>
+	<x-ghost/>
+	<x-email/>
+	<x-sw/>
+	<x-summaly/>
+	<x-integrations/>
 	<ui-card>
 		<template #title><fa icon="cog"/> {{ $t('instance') }}</template>
 		<section class="fit-top fit-bottom">
