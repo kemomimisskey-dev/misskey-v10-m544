@@ -148,11 +148,6 @@ import XIntegrations from './cards/integrations.vue';
 export default defineComponent({
 	i18n: i18n('admin/views/instance.vue'),
 
-<<<<<<< HEAD
-	components: {
-		XGeneral, XNotetl, XDrive, XCaptcha, XGhost, XEmail, XSw, XSummaly, XIntegrations,
-	},
-=======
 	data() {
 		return {
 			fetched: false,
@@ -359,6 +354,5 @@ export default defineComponent({
 			});
 		}
 	}
->>>>>>> 3b6a7580f... Feat: disable User Preview
 });
 </script>
