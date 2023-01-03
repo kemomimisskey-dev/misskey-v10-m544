@@ -23,12 +23,8 @@
 				<span class="acct">@{{ user | acct }} 
 					<fa v-if="user.isLocked == true" class="locked" icon="lock" fixed-width/>
 					<fa v-if="user.refuseFollow == true" class="refuseFollow" icon="ban" fixed-width/>
-<<<<<<< HEAD
-					<span class="is-admin" v-if="user.isAdmin" :title="$t('@.admin-user')"><fa :icon="faCrown"/></span>
-=======
 					<span class="is-admin" v-if="user.isAdmin" :title="$t('@.admin-user')"><fa icon="wrench"/></span>
 					<span class="is-moderator" v-if="user.isModerator" :title="$t('@.moderator')"><fa :icon="faUserShield"/></span>
->>>>>>> 24872b955... Show Moderatar Icon
 					<span class="is-verified" v-if="user.isVerified" :title="$t('@.verified-user')"><fa icon="star"/></span>
 					<span class="is-bot" v-if="user.isBot" :title="$t('@.bot-user')"><fa icon="robot"/></span>
 					<span class="is-cat" v-if="user.isCat" :title="$t('@.cat-user')"><fa :icon="faPaw"/></span>

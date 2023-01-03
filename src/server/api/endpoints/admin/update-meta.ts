@@ -368,13 +368,8 @@ export default define(meta, async (ps) => {
 		set.disableTimelinePreview = ps.disableTimelinePreview;
 	}
 
-<<<<<<< HEAD
-	if (typeof ps.disableProfileDirectory === 'boolean') {
-		set.disableProfileDirectory = ps.disableProfileDirectory;
-=======
 	if (typeof ps.disableUserPreview === 'boolean') {
 		set.disableUserPreview = ps.disableUserPreview;
->>>>>>> 3b6a7580f... Feat: disable User Preview
 	}
 
 	if (Array.isArray(ps.hidedTags)) {

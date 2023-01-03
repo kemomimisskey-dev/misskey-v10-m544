@@ -1,16 +1,5 @@
 <template>
 <div>
-<<<<<<< HEAD
-	<x-general/>
-	<x-notetl/>
-	<x-drive/>
-	<x-captcha/>
-	<x-ghost/>
-	<x-email/>
-	<x-sw/>
-	<x-summaly/>
-	<x-integrations/>
-=======
 	<ui-card>
 		<template #title><fa icon="cog"/> {{ $t('instance') }}</template>
 		<section class="fit-top fit-bottom">
@@ -140,7 +129,6 @@
 			<ui-button @click="updateMeta">{{ $t('save') }}</ui-button>
 		</section>
 	</ui-card>
->>>>>>> 3b6a7580f... Feat: disable User Preview
 </div>
 </template>
 
