@@ -152,7 +152,7 @@ export const meta = {
 				'ja-JP': 'hide Follow/Follower list'
 			}
 		},
-
+		
 		noFederation: {
 			validator: $.optional.bool,
 			desc: {
