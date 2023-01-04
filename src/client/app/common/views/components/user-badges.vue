@@ -73,6 +73,14 @@ export default defineComponent({
 					class: 'cat',
 					icon: faPaw,
 				});
+			}	
+			
+			if (this.user.isFox) {
+				items.push({
+					label: this.$t('@.fox-user'),
+					class: 'fox',
+					icon: faPaw,
+				});
 			}
 
 			// roles

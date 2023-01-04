@@ -179,6 +179,15 @@ common:
     "_moderator_": "管理者またはモデレーター権限が必要かの？"
     "_secure_": "サードパーティーアクセス不可かの？"
 
+  roles:
+    admin: Admin
+    moderator: Moderator
+
+  userStatuses:
+    silenced: サイレンス済みなのじゃ
+    suspended: 凍結済みなのじゃ
+    deleted: 削除済みなのじゃ
+
   empty-timeline-info:
     follow-users-to-make-your-timeline: "ユーザーをフォローすると投稿がタイムラインに表示されるのじゃ。"
     explore: "ユーザーを探索するのじゃ"
@@ -1402,7 +1411,7 @@ common/views/components/mute-and-block.vue:
 common/views/components/settings/extended-notification.vue:
   extended-notification: "拡張通知"
   highlighted-words: "ハイライトワード"
-  highlighted-words-description: "通知したいワードを1行に1つずつ入力するのじゃ"
+  highlighted-words-description: "通知したいワードを1行に1つずつ入力するのじゃ。5つまで指定できるのじゃ。"
   save: "保存"
 
 common/views/components/password-settings.vue:
@@ -1748,6 +1757,7 @@ admin/views/users.vue:
       verified: "公式アカウントなのじゃ"
       silenced: "サイレンス済みなのじゃ"
       suspended: "凍結済みなのじゃ"
+      deleted: "削除済みなのじゃ"
     origin:
       title: "オリジン"
       combined: "ローカル+リモート"
@@ -1763,6 +1773,9 @@ admin/views/moderators.vue:
     added: "モデレーターを登録したのじゃ"
     remove: "解除"
     removed: "モデレーター登録を解除したのじゃ"
+
+  moderators:
+    title: "モデレーター一覧なのじゃ"
 
 admin/views/emoji.vue:
   add-emoji:
