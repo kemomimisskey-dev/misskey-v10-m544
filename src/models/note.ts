@@ -123,6 +123,9 @@ export type INote = {
 	mecabWords?: string[];
 	trendWords?: string[];
 
+	// 参照IDs
+	referenceIds?: mongo.ObjectID[];
+
 	// 非正規化
 	_reply?: {
 		userId: mongo.ObjectID;
@@ -415,11 +418,9 @@ export const pack = async (
 		url: db.url || null,
 		appId: toOidStringOrNull(db.appId),
 		app: db.appId ? packApp(db.appId) : null,
-
 		visibleUserIds: db.visibleUserIds?.length > 0 ? db.visibleUserIds.map(toOidString) : [],
 		mentions: db.mentions?.length > 0 ? db.mentions.map(toOidString) : [],
 		hasRemoteMentions: db.mentionedRemoteUsers?.length > 0,
-
 		...(opts.detail ? {
 			reply: (opts.detail && db.replyId) ? pack(db.replyId, meId, {
 				detail: false
@@ -427,6 +428,13 @@ export const pack = async (
 
 			renote: db.renoteId ? pack(db.renoteId, meId, {
 				detail: true
+			}) : null,
+
+			referenceIds: db.referenceIds?.reverse(),
+
+			references: db.referenceIds ? packMany(db.referenceIds.reverse(), meId, {
+				detail: false,
+				removeError: true,
 			}) : null,
 
 			poll: db.poll ? populatePoll() : null,

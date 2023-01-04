@@ -179,6 +179,15 @@ common:
     "_moderator_": "管理者またはモデレーター権限が必要"
     "_secure_": "サードパーティーアクセス不可"
 
+  roles:
+    admin: Admin
+    moderator: Moderator
+
+  userStatuses:
+    silenced: サイレンス済み
+    suspended: 凍結済み
+    deleted: 削除済み
+
   empty-timeline-info:
     follow-users-to-make-your-timeline: "ユーザーをフォローすると投稿がタイムラインに表示されます。"
     explore: "ユーザーを探索する"
@@ -1403,7 +1412,7 @@ common/views/components/mute-and-block.vue:
 common/views/components/settings/extended-notification.vue:
   extended-notification: "拡張通知"
   highlighted-words: "ハイライトワード"
-  highlighted-words-description: "通知したいワードを1行に1つずつ入力します"
+  highlighted-words-description: "通知したいワードを1行に1つずつ入力します。5つまで指定できます。"
   save: "保存"
 
 common/views/components/password-settings.vue:
@@ -1754,6 +1763,7 @@ admin/views/users.vue:
       verified: "公式アカウント"
       silenced: "サイレンス済み"
       suspended: "凍結済み"
+      deleted: "削除済み"
     origin:
       title: "オリジン"
       combined: "ローカル+リモート"
@@ -1769,6 +1779,8 @@ admin/views/moderators.vue:
     added: "モデレーターを登録しました"
     remove: "解除"
     removed: "モデレーター登録を解除しました"
+  moderators:
+    title: "モデレーター一覧"
 
 admin/views/emoji.vue:
   add-emoji:

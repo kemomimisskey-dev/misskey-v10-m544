@@ -29,7 +29,7 @@ export default class extends Channel {
 
 	@autobind
 	private async onNote(note: PackedNote) {
-		if (note.visibility !== 'public' && note.visibility !== 'home') return;
+		if (note.visibility !== 'public') return;
 		if (note.user!.host != null) return;
 		if (!this.showReplayInPublicTimeline && note.replyId) return;
 		if (note.hasRemoteMentions) return;
@@ -40,6 +40,8 @@ export default class extends Channel {
 				detail: true
 			});
 		}
+
+		if (note.renote?.user?.host) return;
 
 		// 流れてきたNoteがミュートしているユーザーが関わるものだったら無視する
 		if (shouldMuteThisNote(note, this.mutedUserIds)) return;

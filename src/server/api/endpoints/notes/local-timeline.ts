@@ -114,7 +114,7 @@ export default define(meta, async (ps, user) => {
 		'_user.host': null,
 
 		// public only
-		visibility: { $in: ['public', 'home'] },
+		visibility: 'public',
 
 		deletedAt: null,
 
@@ -143,6 +143,8 @@ export default define(meta, async (ps, user) => {
 			$nin: hideUserIds
 		};
 	}
+
+	query['_renote.user.host'] = null;
 
 	const withFiles = ps.withFiles != null ? ps.withFiles : ps.mediaOnly;
 
