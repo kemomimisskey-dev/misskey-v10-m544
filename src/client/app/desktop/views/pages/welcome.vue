@@ -30,8 +30,7 @@
 						<span class="signup" @click="signup" v-if="meta && !(meta.disableRegistration && meta.disableInvitation)">{{ $t('@.signup') }}</span>
 						<span class="divider" v-if="meta && !(meta.disableRegistration && meta.disableInvitation)">|</span>
 						<span class="signin" @click="signin">{{ $t('@.signin') }}</span>
-						<span class="divider">|</span>
-						<span class="explore" onclick="window.location.href='/explore'">{{ $t('@.explore') }}</span>
+						<span class="divider"></span>
 					</p>
 
 					<img v-if="meta && meta.mascotImageUrl" :src="meta.mascotImageUrl" alt="" title="藍" class="char">
